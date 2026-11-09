@@ -20,3 +20,4 @@ Corte de datos: 08-11-2026, desde el BI del grupo (DW Corp).
 - **Desde la caída · 19-oct:** fecha de detección y análisis del 19-oct al 08-nov. La primera señal es el sábado 17-oct; desde el lunes 19-oct el SSS móvil de 7 días es negativo. SSS −17,4% (13 tiendas, −$68,7 MM). Fabrics +13,5%.
 - **Solo noviembre:** 1 al 8 de noviembre (SSS −23,7%).
 - Cálculos: `calculos/deteccion.py` (SSS diario y móvil 7 días) y `calculos/desde_caida.py`.
+- **Equipos:** dotación contra la recomendada por tráfico, cobertura de jefatura, ausencias, venta por hora trabajada, unidades por boleta y cumplimiento de metas por vendedor (31-ago a 27-sep vs. 19-oct a 08-nov de 2026). Cálculos en `calculos/equipos.py`.

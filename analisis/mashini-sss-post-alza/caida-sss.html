@@ -118,6 +118,7 @@ footer p{max-width:none}
   <nav class="tabs" role="tablist" aria-label="Período del análisis">
     <a href="#desde-caida" role="tab" id="tab-desde-caida" aria-controls="desde-caida" aria-selected="true">Desde la caída · 19-oct</a>
     <a href="#noviembre" role="tab" id="tab-noviembre" aria-controls="noviembre" aria-selected="false">Solo noviembre</a>
+    <a href="#equipos" role="tab" id="tab-equipos" aria-controls="equipos" aria-selected="false">Equipos</a>
   </nav>
 </div>
 <div class="panel" id="desde-caida" role="tabpanel" aria-labelledby="tab-desde-caida">
@@ -563,6 +564,121 @@ footer p{max-width:none}
 
 
 </div>
+<div class="panel" id="equipos" role="tabpanel" aria-labelledby="tab-equipos" hidden>
+<header class="tabhead">
+  <div class="eyebrow">Equipos · antes de la caída (31-ago a 27-sep) vs. desde la caída (19-oct a 8-nov) · 2026</div>
+  <h2 class="big">No faltan personas: falta venta por persona, jefatura en las tiendas que más caen y dotación donde está el tráfico</h2>
+  <p class="lead">Las horas de dotación son las mismas que en septiembre y la cobertura contra lo recomendado por tráfico no cambió. Lo que cae es la venta por hora trabajada, justo en la época en que debería subir. En las tiendas que más pierden se repiten cuatro cosas: menos horas con jefe, más ausencias, menos unidades por boleta y personas asignadas a tiendas que no las necesitan.</p>
+</header>
+
+<section aria-label="Indicadores de equipos">
+  <div class="kpis">
+    <div class="kpi"><span class="v neg num">−11%</span><span class="l">Venta de caja por hora trabajada ($50.300 → $44.600). Por estacionalidad debía subir ~14%</span></div>
+    <div class="kpi"><span class="v num">+1%</span><span class="l">Horas trabajadas por día en tiendas (378 → 383): la dotación no bajó</span></div>
+    <div class="kpi"><span class="v num">32%</span><span class="l">De las horas abiertas sin jefe ni subjefe en sala</span></div>
+    <div class="kpi"><span class="v neg num">59%</span><span class="l">Cumplimiento mediano de meta por vendedor. Solo 3 de 71 llegan al 100%</span></div>
+  </div>
+  <p class="note">Fuentes: asistencia y dotación recomendada por tráfico (per_asistencia_cumplimiento y per_asistencia_resumen), cobertura de jefatura (eq_tienda_dia), venta por vendedor (tiendas_equipo_vendedores) y metas por vendedor (metas_vendedores). Mashini tiene datos de equipos solo desde 2026, por eso se compara contra septiembre y no contra 2025. La estacionalidad sale de la venta 2025 de las mismas tiendas: del 20-oct al 9-nov se vendió 14% más por día que en septiembre.</p>
+</section>
+
+<section class="verdict" aria-label="Diagnóstico de equipos">
+  <div class="eyebrow">Diagnóstico de equipos</div>
+  <ol>
+    <li><strong>La dotación no explica la caída.</strong> Las tiendas tienen las mismas horas de personas que en septiembre y cubren el 88% de lo que recomienda el tráfico (87% antes). Lo que cambió es la venta por hora: −11%, cuando con la temporada debía subir ~14%.</li>
+    <li><strong>La dotación está mal repartida.</strong> Sobran horas en Alameda (+72% sobre lo recomendado), Liquidación Mackenna (+58%), Outlet Puente Alto (+27%) y Vivo Maipú (+18%). Faltan en Vivo La Florida (−22%, 5,4 horas faltantes por día), Rancagua Outlet (−13%), Curauma y La Fábrica (−11%). Reasignar cerca de 14 horas diarias, unos 2 turnos, cubre los déficits sin contratar.</li>
+    <li><strong>Falta jefatura donde más se cae.</strong> Vivo La Florida opera sin jefe el 84% de las horas (en septiembre, el 100%) y cae −29%. En Viña las horas con jefe bajaron de 56% a 36%, y es la segunda tienda que más cae (−35%). En toda la cadena, una de cada tres horas abiertas no tiene jefe ni subjefe.</li>
+    <li><strong>Las ausencias suben en tiendas que caen.</strong> Curauma pasó de 0 a 7 días de ausencia por semana, Rancagua de 0 a 6,7, Viña de 0 a 3 y Rancagua Outlet de 6,3 a 10.</li>
+    <li><strong>Se vende peor dentro de la boleta.</strong> Las unidades por boleta bajan en las tiendas que más pierden (Easton 2,58 → 2,10; Buenaventura 2,87 → 2,52; Curauma 2,45 → 2,14). Además, la venta con descuento fuerte (más de 40%) se duplica, de 2,8% a 6,2%: el equipo vende más liquidación y menos a precio normal.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="t3-s-tiendas">
+  <div class="eyebrow">Tiendas</div>
+  <h2 id="t3-s-tiendas">Cada tienda tiene un problema de equipo distinto</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Tienda</th><th>SSS desde la caída</th><th>Dotación vs. recomendada</th><th>Horas faltantes por día</th><th>Horas con jefe (antes → ahora)</th><th>Ausencias por semana (antes → ahora)</th><th>Venta por hora trabajada (miles)</th><th>Unidades por boleta</th><th>Lectura</th></tr></thead>
+    <tbody>
+      <tr><td>Easton</td><td class="neg">−40,7%</td><td>106%</td><td>1,3</td><td>53% → 53%</td><td>8,8 → 6,0</td><td>$31,6 → $38,0</td><td class="neg">2,58 → 2,10</td><td class="tag"><span class="pill neg">Tienda, no dotación</span></td></tr>
+      <tr><td>Viña Outlet Park</td><td class="neg">−35,2%</td><td>97%</td><td>3,2</td><td class="neg">56% → 36%</td><td class="neg">0 → 3,0</td><td class="neg">$56,1 → $35,1</td><td>2,18 → 2,17</td><td class="tag"><span class="pill neg">Falta jefatura</span></td></tr>
+      <tr><td>Vivo La Florida</td><td class="neg">−29,0%</td><td class="neg">78%</td><td class="neg">5,4</td><td class="neg">0% → 16%</td><td>0,5 → 0</td><td class="neg">$76,2 → $61,3</td><td>2,14 → 2,17</td><td class="tag"><span class="pill neg">Sin jefe y con déficit</span></td></tr>
+      <tr><td>Buenaventura</td><td class="neg">−27,6%</td><td>104%</td><td>2,5</td><td>63% → 56%</td><td>13,5 → 7,0</td><td class="neg">$65,0 → $41,2</td><td class="neg">2,87 → 2,52</td><td class="tag"><span class="pill warn">Productividad</span></td></tr>
+      <tr><td>Curauma</td><td class="neg">−27,4%</td><td class="neg">89%</td><td class="neg">4,0</td><td>56% → 54%</td><td class="neg">0 → 7,0</td><td class="neg">$65,5 → $46,3</td><td class="neg">2,45 → 2,14</td><td class="tag"><span class="pill neg">Ausencias</span></td></tr>
+      <tr><td>La Fábrica</td><td class="neg">−23,8%</td><td class="neg">89%</td><td class="neg">3,9</td><td>56% → 63%</td><td>3,8 → 0</td><td class="neg">$78,0 → $59,8</td><td>2,21 → 2,11</td><td class="tag"><span class="pill warn">Déficit en peak</span></td></tr>
+      <tr><td>Plaza Egaña</td><td class="neg">−22,3%</td><td>105%</td><td>2,5</td><td>61% → 55%</td><td>1,3 → 2,0</td><td>$35,0 → $30,7</td><td>2,31 → 2,21</td><td class="tag"><span class="pill warn">Tráfico, no equipo</span></td></tr>
+      <tr><td>Vivo Maipú</td><td class="neg">−14,5%</td><td class="warn">118%</td><td>1,3</td><td>68% → 57%</td><td>0 → 0</td><td>$45,6 → $44,4</td><td>2,47 → 2,29</td><td class="tag"><span class="pill pos">Sobra dotación</span></td></tr>
+      <tr><td>Alameda</td><td class="neg">−12,9%</td><td class="warn">172%</td><td>0,4</td><td>86% → 74%</td><td>9,8 → 2,3</td><td>$42,4 → $45,8</td><td>1,86 → 1,88</td><td class="tag"><span class="pill pos">Sobra dotación</span></td></tr>
+      <tr><td>Rancagua</td><td class="neg">−9,6%</td><td>104%</td><td>2,2</td><td>56% → 58%</td><td class="neg">0 → 6,7</td><td class="neg">$49,4 → $32,1</td><td class="neg">2,37 → 2,12</td><td class="tag"><span class="pill neg">Ausencias</span></td></tr>
+      <tr><td>Rancagua Outlet</td><td class="neg">−7,9%</td><td class="neg">87%</td><td class="neg">4,0</td><td>54% → 56%</td><td class="neg">6,3 → 10,0</td><td>$65,1 → $59,1</td><td class="neg">2,67 → 2,40</td><td class="tag"><span class="pill neg">Ausencias + déficit</span></td></tr>
+      <tr><td>Antofagasta</td><td>−4,8%</td><td>99%</td><td>3,2</td><td>55% → 56%</td><td>4,5 → 0,7</td><td class="pos">$44,6 → $51,5</td><td class="pos">2,21 → 2,71</td><td class="tag"><span class="pill pos">Bien</span></td></tr>
+      <tr><td>Liquidación Mackenna</td><td class="pos">+123,7%*</td><td class="warn">158%</td><td>0,3</td><td>96% → 95%</td><td>0 → 0</td><td class="pos">$31,1 → $51,4</td><td class="pos">2,78 → 3,84</td><td class="tag"><span class="pill pos">Sobra dotación</span></td></tr>
+      <tr><td>21 de Mayo</td><td>n/c</td><td>92%</td><td>2,8</td><td>92% → 81%</td><td>0 → 0</td><td>$51,5 → $58,9</td><td>1,78 → 1,85</td><td class="tag"><span class="pill pos">Bien</span></td></tr>
+      <tr><td>Outlet Puente Alto</td><td>n/c</td><td class="warn">127%</td><td>1,0</td><td>58% → 58%</td><td>0,8 → 0,3</td><td>$46,6 → $40,6</td><td>2,35 → 2,46</td><td class="tag"><span class="pill pos">Sobra dotación</span></td></tr>
+      <tr><td>Peñuelas</td><td>n/c</td><td>110%</td><td>2,2</td><td>54% → 60%</td><td>0 → 0</td><td class="neg">$43,4 → $25,8</td><td class="neg">2,82 → 2,26</td><td class="tag"><span class="pill warn">Productividad</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Dotación vs. recomendada = horas de personas presentes ÷ horas recomendadas por el tráfico real, desde la caída. Horas faltantes = horas abiertas en que faltó gente según el tráfico, por día. Horas con jefe = horas abiertas con jefe de tienda en sala. Ausencias = días de ausencia registrados, por semana (septiembre tiene 4 semanas y el período desde la caída 3). Venta por hora trabajada = venta de caja ÷ horas presentes. *Mackenna absorbió el ex Catálogo Mackenna. n/c = sin año anterior comparable. Easton tuvo días cerrados en septiembre, así que su punto de partida es bajo.</p>
+</section>
+
+<section aria-labelledby="t3-s-metas">
+  <div class="eyebrow">Vendedores</div>
+  <h2 id="t3-s-metas">Casi nadie llega a la meta: el problema es de toda la red, no de algunas personas</h2>
+  <div class="cols">
+    <div>
+      <div class="chart" id="t3-chart-metas" role="img" aria-label="Distribución de cumplimiento de meta por vendedor"></div>
+      <p class="note">71 vendedores con meta y venta desde el 19-oct al 8-nov (metas_vendedores, días con meta). Hay además 2 personas con meta asignada y sin venta registrada (posible licencia o error de planilla): su meta infla la brecha de sus tiendas.</p>
+    </div>
+    <div>
+      <ul>
+        <li><strong>3 vendedores</strong> sobre el 100% de su meta. Dos están en Liquidación Mackenna, la única tienda que crece.</li>
+        <li><strong>4</strong> entre 80% y 99%, <strong>27</strong> entre 60% y 79%, <strong>23</strong> entre 50% y 59% y <strong>14</strong> bajo 50%.</li>
+        <li>Mediana: <strong>59%</strong>. Si casi todos están lejos de la meta, el problema no es de desempeño individual: las metas se fijaron con una venta que el precio y el surtido actuales no están generando.</li>
+        <li>Las 8 personas que entraron en agosto y septiembre cumplen en promedio 69%, sobre la mediana. La caída no viene de los equipos nuevos.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t3-s-hora">
+  <div class="eyebrow">Horas peak</div>
+  <h2 id="t3-s-hora">De 16 a 18 horas entra el 37% del tráfico y la conversión no sube: ahí falta gente</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Hora (desde la caída, todas las tiendas)</th><th>Entradas</th><th>% del tráfico</th><th>Conversión</th><th>Venta por entrada (con IVA)</th></tr></thead>
+    <tbody>
+      <tr><td>11 a 13 h</td><td>20.532</td><td>29%</td><td>23,3%</td><td>$7.148</td></tr>
+      <tr><td>14 a 15 h</td><td>14.484</td><td>21%</td><td>21,9%</td><td>$6.338</td></tr>
+      <tr><td class="neg">16 a 18 h</td><td>26.434</td><td>37%</td><td>23,2%</td><td>$6.756</td></tr>
+      <tr><td>19 h</td><td>5.565</td><td>8%</td><td class="pos">27,3%</td><td class="pos">$8.045</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">tiendas_conversion_hora, 19-oct a 8-nov. Conversión = boletas de caja ÷ entradas. Las horas de mayor flujo convierten igual que el promedio (23%) y bajo las 19 h (27%), cuando hay menos clientes por vendedor. Ahí está el espacio para mover turnos desde las tiendas con sobra.</p>
+</section>
+
+<section aria-labelledby="t3-s-acc">
+  <div class="eyebrow">Qué hacer con los equipos</div>
+  <h2 id="t3-s-acc">Mover horas, poner jefes y medir unidades por boleta</h2>
+  <div class="actions">
+    <div class="act"><div class="when">Esta semana</div><div><h3>Reasignar dotación sin contratar</h3><ul>
+      <li>Mover cerca de 14 horas diarias desde Alameda, Liquidación Mackenna y Outlet Puente Alto hacia Vivo La Florida, Rancagua Outlet, Curauma y La Fábrica, concentradas de 16 a 18 h.</li>
+      <li>Usar la dotación recomendada por tráfico como regla para la planificación de turnos de noviembre y diciembre.</li>
+    </ul></div><div class="imp">Cubre cerca de 300 horas de déficit cada 3 semanas.</div></div>
+    <div class="act"><div class="when">Esta semana</div><div><h3>Jefatura en las tiendas críticas</h3><ul>
+      <li>Vivo La Florida necesita jefe de tienda designado: hoy opera sin jefe el 84% de las horas.</li>
+      <li>Viña: recuperar la cobertura de jefatura de septiembre (56% de las horas). Si hay licencia o vacante, cubrir con un subjefe de otra tienda.</li>
+      <li>Meta interna: ninguna tienda con más de 25% de horas sin jefe ni subjefe en diciembre.</li>
+    </ul></div><div class="imp">Vivo La Florida y Viña suman −$20 MM desde la caída.</div></div>
+    <div class="act"><div class="when">2 semanas</div><div><h3>Ausencias y venta cruzada</h3><ul>
+      <li>Revisar con RR. HH. las ausencias nuevas en Curauma, Rancagua, Viña y Rancagua Outlet. Cubrir con reemplazos antes de Black Friday.</li>
+      <li>Meta diaria de unidades por boleta por vendedor (base: 2,5) con venta cruzada en caja: sábana con funda, quilt con cojín, toalla en set.</li>
+      <li>Frenar la venta con descuento fuerte en tiendas regulares: dejar la liquidación en Mackenna y los outlets.</li>
+    </ul></div><div class="imp">Unidades por boleta y descuentos se miden cada semana por tienda.</div></div>
+    <div class="act"><div class="when">Este mes</div><div><h3>Metas y datos de equipos</h3><ul>
+      <li>Recalibrar las metas de noviembre y diciembre al nuevo nivel de venta: con una mediana de cumplimiento de 59%, la meta deja de motivar.</li>
+      <li>Ordenar Odoo: casi nadie tiene cargo cargado y no se registran desvinculaciones. Hoy no se puede medir la rotación ni separar vendedores de jefes.</li>
+    </ul></div><div class="imp">Sin estos datos no hay seguimiento real de los equipos.</div></div>
+  </div>
+</section>
+
+</div>
 <footer>
   <p><strong>Fuentes:</strong> BI del grupo (DW Corp), consultado el 09-11-2026: ventas_tiendas (venta neta, meta, boletas, tráfico, SSS oficial) para Mashini y Fabrics; com_comparativo_ventas, _documentos y _trafico (series diarias y por categoría); com_ventas_detalle (precio por SKU en caja); descuentos (promociones de caja); quiebres_cobertura, stock_disponible y stock_valorizado (foto del 09-11); resumen_marcas (Shopify).</p>
   <p><strong>Límites:</strong> Son ocho días de noviembre, así que un fin de semana pesa mucho. 2025 viene de Adempiere, sin descuentos ni boletas por tipo de documento. Los contadores de tráfico tienen cortes o saltos (Curauma, La Fábrica). El precio por unidad mezcla precio y mix.</p>
@@ -670,10 +786,20 @@ footer p{max-width:none}
       s+=`<text x="${v<0?a-5:a+bw+5}" y="${yy+rowH/2+4}" text-anchor="${v<0?'end':'start'}" fill="${css('--fg')}" font-weight="600">${v>0?'+':'−'}$${Math.abs(v).toFixed(1).replace('.',',')}</text>`;});
     el.innerHTML=s+'</svg>';
   }
-  function draw(){roll();malls();cats();}
+
+  const MT=[["≥100%",3],["80–99%",4],["60–79%",27],["50–59%",23],["<50%",14]];
+  function metas(){
+    const el=document.getElementById('t3-chart-metas'); const w=440,h=240,ml=60,mr=40,mt=10,rowH=40; let s=svg(w,h);
+    const max=30,x=v=>ml+v/max*(w-ml-mr);
+    MT.forEach((d,i)=>{const yy=mt+i*rowH; const c=i<2?css('--bar-pos'):(i<3?css('--bar-ly'):css('--bar-neg'));
+      s+=`<text x="${ml-8}" y="${yy+rowH/2+4}" text-anchor="end" fill="${css('--fg')}">${d[0]}</text><rect x="${ml}" y="${yy+8}" width="${x(d[1])-ml}" height="${rowH-16}" fill="${c}"/><text x="${x(d[1])+6}" y="${yy+rowH/2+4}" fill="${css('--fg')}" font-weight="600">${d[1]}</text>`;});
+    s+=`<text x="${ml}" y="${h-6}" fill="${css('--fg-3')}">vendedores por tramo de cumplimiento</text>`;
+    el.innerHTML=s+'</svg>';
+  }
+  function draw(){roll();malls();cats();metas();}
   draw();
   try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
-  const ids=['desde-caida','noviembre'];
+  const ids=['desde-caida','noviembre','equipos'];
   function show(){const h=(location.hash||'').slice(1);const cur=ids.includes(h)?h:ids[0];
     ids.forEach(id=>{document.getElementById(id).hidden=id!==cur;document.getElementById('tab-'+id).setAttribute('aria-selected',String(id===cur));});}
   window.addEventListener('hashchange',show); show();

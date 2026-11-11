@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque/opsz.css";
+@import "@fontsource/instrument-serif/latin-400.css";
+@import "@fontsource/instrument-serif/latin-400-italic.css";
+
+@theme {
+  --color-ink: #17130f;
+  --color-paper: #f4eee3;
+  --color-chalk: #fbf8f2;
+  --color-sol: #e4551b;
+  --color-brasa: #b8380c;
+  --color-ambar: #f6b23c;
+  --color-fresco: #0e3d3b;
+  --color-menta: #a8d8cb;
+  --color-niebla: #d9e6e0;
+  --color-wa: #128c4b;
+
+  --font-display: "Bricolage Grotesque Variable", "Arial Narrow", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+
+  --shadow-hard: 6px 6px 0 0 var(--color-ink);
+  --shadow-hard-sm: 3px 3px 0 0 var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 16;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 96;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@layer components {
+/* Botones: borde duro y sombra sólida, se "hunden" al apretar */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.35rem;
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: var(--shadow-hard-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 0 var(--color-ink);
+}
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 0 var(--color-ink);
+}
+.btn-wa {
+  background: var(--color-wa);
+  color: #fff;
+}
+.btn-sol {
+  background: var(--color-sol);
+  color: #fff;
+}
+.btn-ghost {
+  background: var(--color-chalk);
+  color: var(--color-ink);
+}
+
+.card {
+  border: 2px solid var(--color-ink);
+  border-radius: 1.25rem;
+  background: var(--color-chalk);
+}
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sol);
+  outline-offset: 3px;
+}
+
+/* Calima: líneas de calor que suben en la escena "sin lámina" */
+@keyframes calima {
+  0% { transform: translateY(6px); opacity: 0; }
+  30% { opacity: 0.9; }
+  100% { transform: translateY(-26px); opacity: 0; }
+}
+.calima path {
+  animation: calima 3.2s ease-in-out infinite;
+}
+.calima path:nth-child(2) { animation-delay: 0.7s; }
+.calima path:nth-child(3) { animation-delay: 1.4s; }
+.calima path:nth-child(4) { animation-delay: 2.1s; }
+
+@keyframes pista {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+.pista { animation: pista 1.6s ease-in-out 3; }
+
+/* Cinta con las comunas */
+@keyframes cinta {
+  to { transform: translateX(-50%); }
+}
+.cinta { animation: cinta 38s linear infinite; }
+
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .mas { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .calima path, .pista, .cinta { animation: none; }
+  .btn { transition: none; }
+}
